@@ -1,0 +1,26 @@
+{
+  "name": "wasm-module-preprocessor",
+  "version": "0.0.0",
+  "main": "./dist/index.js",
+  "description": "A general-purpose module for preprocessing WebAssembly (wasm).",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dfrankland/wasm-module-preprocessors.git"
+  },
+  "keywords": [
+    "preprocessor",
+    "wasm",
+    "webassembly",
+    "asm",
+    "module",
+    "bundler"
+  ],
+  "author": "Dylan Frankland",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dfrankland/wasm-module-preprocessors/issues"
+  },
+  "homepage": "https://github.com/dfrankland/wasm-module-preprocessors/tree/master/packages/wasm-module-preprocessor#readme",
+  "dependencies": {},
+  "devDependencies": {}
+}

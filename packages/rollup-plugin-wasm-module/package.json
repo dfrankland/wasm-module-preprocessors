@@ -1,0 +1,30 @@
+{
+  "name": "rollup-plugin-wasm-module",
+  "version": "0.0.0",
+  "main": "./dist/index.js",
+  "description": "A Rollup plugin that wraps wasm-module-preprocessor.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dfrankland/wasm-module-preprocessors.git"
+  },
+  "keywords": [
+    "rollup",
+    "plugin",
+    "wasm",
+    "webassembly",
+    "asm",
+    "module",
+    "bundler"
+  ],
+  "author": "Dylan Frankland",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dfrankland/wasm-module-preprocessors/issues"
+  },
+  "homepage": "https://github.com/dfrankland/wasm-module-preprocessors/tree/master/packages/rollup-plugin-wasm-module#readme",
+  "dependencies": {
+    "rollup-pluginutils": "^2.0.1",
+    "wasm-module-preprocessor": "^0.0.0"
+  },
+  "devDependencies": {}
+}

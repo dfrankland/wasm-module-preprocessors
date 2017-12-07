@@ -1,0 +1,116 @@
+{
+  "name": "wasm-module-preprocessors",
+  "version": "0.0.0",
+  "description": "A monorepo of loaders and plugins that preprocess WebAssembly (wasm) modules.",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dfrankland/wasm-module-preprocessors.git"
+  },
+  "keywords": [
+    "webpack",
+    "rollup",
+    "wasm",
+    "webassembly",
+    "asm",
+    "module",
+    "bundler"
+  ],
+  "author": "Dylan Frankland",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dfrankland/wasm-module-preprocessors/issues"
+  },
+  "homepage": "https://github.com/dfrankland/wasm-module-preprocessors#readme",
+  "scripts": {
+    "lerna:bootstrap": "lerna bootstrap -- --no-package-lock",
+    "lerna:clean": "lerna clean --yes",
+    "lerna:publish": "lerna publish",
+    "postinstall": "npm run lerna:bootstrap",
+    "clean": "rimraf ./packages/*/dist ./packages/*/build ./packages/*/package-lock.json",
+    "postclean": "npm run lerna:bootstrap",
+    "prebuild": "npm run clean",
+    "build": "rollup -c ./rollup.config.js",
+    "pretest": "npm run build",
+    "test": "jest",
+    "lint": "eslint -c ./package.json --ignore-pattern node_modules ./packages/*/src/",
+    "prepublish": "npm run test",
+    "publish": "npm run lerna:publish"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.2",
+    "babel-jest": "^21.2.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-istanbul": "^4.1.5",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^4.11.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jest": "^21.3.2",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.5.1",
+    "glob": "^7.1.2",
+    "jest": "^21.2.1",
+    "lerna": "^2.5.1",
+    "rimraf": "^2.6.2",
+    "rollup": "^0.51.8",
+    "rollup-plugin-babel": "^3.0.2"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ],
+      "stage-0"
+    ],
+    "plugins": [
+      "istanbul"
+    ]
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": "airbnb",
+    "env": {
+      "browser": true,
+      "jest/globals": true
+    },
+    "rules": {
+      "react/jsx-filename-extension": "off",
+      "import/no-extraneous-dependencies": [
+        "error",
+        {
+          "devDependencies": [
+            "rollup.config.js",
+            "**/__tests__/**/*"
+          ]
+        }
+      ]
+    },
+    "plugins": [
+      "jest"
+    ]
+  },
+  "jest": {
+    "testRegex": "\\/__tests__\\/(?!__fixtures__).*\\.js$",
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "./packages/*/src/**/*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 30,
+        "functions": 30,
+        "lines": 30,
+        "statements": 30
+      }
+    }
+  }
+}

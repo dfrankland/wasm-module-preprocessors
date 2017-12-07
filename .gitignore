@@ -57,3 +57,9 @@ typings/
 # dotenv environment variables file
 .env
 
+# build / dist directories
+build
+dist
+
+# package-lock.json incompatible with lerna :(
+/packages/**/package-lock.json
