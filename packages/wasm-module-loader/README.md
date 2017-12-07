@@ -1,4 +1,4 @@
-# wasm-module-preprocessor
+# wasm-module-loader
 
 A [Webpack][webpack] loader that wraps
 [`wasm-module-preprocessor`][wasm-module-preprocessor].
