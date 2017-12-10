@@ -25,5 +25,9 @@
   "dependencies": {
     "loader-utils": "^1.1.0",
     "wasm-module-preprocessor": "^0.0.1"
+  },
+  "devDependencies": {
+    "puppeteer": "^0.13.0",
+    "webpack": "^3.10.0"
   }
 }
