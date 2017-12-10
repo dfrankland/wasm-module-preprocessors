@@ -11,7 +11,7 @@ export default ({
     name: 'wasm-module',
     transform: (code, id) => {
       if (!filter(id)) return null;
-      return wasmModulePreprocessor(code, options);
+      return `export default ${wasmModulePreprocessor(code, options)}`;
     },
   };
 };
