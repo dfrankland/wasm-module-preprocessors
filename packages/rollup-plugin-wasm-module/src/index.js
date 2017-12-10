@@ -14,6 +14,8 @@ export default ({
     // Need to use this `load` function becuase Rollup's default `load` uses
     // `utf8` encoding which corrupts some binary files.
     load: (id) => {
+      if (!filter(id)) return null;
+
       const buffer = readFileSync(id);
 
       const defaultEncodedString = buffer.toString('utf8');
