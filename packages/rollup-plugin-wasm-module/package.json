@@ -25,5 +25,9 @@
   "dependencies": {
     "rollup-pluginutils": "^2.0.1",
     "wasm-module-preprocessor": "^0.0.1"
+  },
+  "devDependencies": {
+    "puppeteer": "^0.13.0",
+    "rollup": "^0.52.1"
   }
 }
