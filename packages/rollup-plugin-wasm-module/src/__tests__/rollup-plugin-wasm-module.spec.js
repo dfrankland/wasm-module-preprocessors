@@ -24,10 +24,10 @@ describe('rollup-plugin-wasm-module', () => {
 
     const result = await page.evaluate(`
       ${code}
-      window.sampleTest();
+      window.factorialTest(10);
     `);
 
-    expect(result).toEqual(3);
+    expect(result).toEqual(3628800);
 
     await browser.close();
   });

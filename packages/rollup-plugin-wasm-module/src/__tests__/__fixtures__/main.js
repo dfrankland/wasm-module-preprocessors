@@ -1,13 +1,13 @@
-import wasmModule from './sample.wasm';
+import wasmModule from './factorial.wasm';
 
-window.sampleTest = async () => {
+window.factorialTest = async (number) => {
   const {
     instance: {
       exports: {
-        main = () => undefined,
+        factorial = () => undefined,
       },
     },
   } = await wasmModule();
 
-  return main();
+  return factorial(number);
 };
