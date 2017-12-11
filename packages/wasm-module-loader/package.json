@@ -2,6 +2,9 @@
   "name": "wasm-module-loader",
   "version": "0.0.2",
   "main": "./dist/index.js",
+  "files": [
+    "dist/index.js"
+  ],
   "description": "A Webpack loader that wraps wasm-module-preprocessor.",
   "repository": {
     "type": "git",

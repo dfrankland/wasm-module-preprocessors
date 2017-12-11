@@ -2,6 +2,9 @@
   "name": "rollup-plugin-wasm-module",
   "version": "0.0.2",
   "main": "./dist/index.js",
+  "files": [
+    "dist/index.js"
+  ],
   "description": "A Rollup plugin that wraps wasm-module-preprocessor.",
   "repository": {
     "type": "git",
