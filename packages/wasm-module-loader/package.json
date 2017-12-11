@@ -1,6 +1,6 @@
 {
   "name": "wasm-module-loader",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "./dist/index.js",
   "files": [
     "dist/index.js"
@@ -27,7 +27,7 @@
   "homepage": "https://github.com/dfrankland/wasm-module-preprocessors/tree/master/packages/wasm-module-loader#readme",
   "dependencies": {
     "loader-utils": "^1.1.0",
-    "wasm-module-preprocessor": "^0.0.2"
+    "wasm-module-preprocessor": "^0.0.3"
   },
   "devDependencies": {
     "puppeteer": "^0.13.0",
