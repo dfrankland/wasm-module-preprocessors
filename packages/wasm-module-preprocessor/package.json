@@ -1,6 +1,6 @@
 {
   "name": "wasm-module-preprocessor",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "./dist/index.js",
   "description": "A general-purpose module for preprocessing WebAssembly (wasm).",
   "repository": {

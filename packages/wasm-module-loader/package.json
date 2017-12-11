@@ -1,6 +1,6 @@
 {
   "name": "wasm-module-loader",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "./dist/index.js",
   "description": "A Webpack loader that wraps wasm-module-preprocessor.",
   "repository": {
@@ -24,7 +24,7 @@
   "homepage": "https://github.com/dfrankland/wasm-module-preprocessors/tree/master/packages/wasm-module-loader#readme",
   "dependencies": {
     "loader-utils": "^1.1.0",
-    "wasm-module-preprocessor": "^0.0.1"
+    "wasm-module-preprocessor": "^0.0.2"
   },
   "devDependencies": {
     "puppeteer": "^0.13.0",
