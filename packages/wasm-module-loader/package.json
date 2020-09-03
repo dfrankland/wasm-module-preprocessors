@@ -30,7 +30,7 @@
     "wasm-module-preprocessor": "^0.0.3"
   },
   "devDependencies": {
-    "puppeteer": "^0.13.0",
+    "puppeteer": "^5.2.1",
     "webpack": "^3.10.0"
   }
 }
